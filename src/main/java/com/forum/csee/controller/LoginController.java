@@ -11,7 +11,7 @@ import com.forum.csee.dao.UserServiceImpl;
 import com.forum.csee.vo.UserVO;
 
 @Controller
-@RequestMapping(value="/login")
+@RequestMapping(value = "/login")
 public class LoginController {
 	
 	@Autowired
@@ -36,7 +36,7 @@ public class LoginController {
 			returnURL = "redirect:/"; 
 		} else { // 로그인 실패
 		System.out.println("로그인 실패!");
-			returnURL = "redirect:/login/login"; 
+			returnURL = "redirect:/login/"; 
 		}
 		return returnURL;
 	}
